@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light" lang="ja">
   <head>
     <title>App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,7 +12,8 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-28 px-5">
+      <%= render 'shared/flash' if notice %>
       <%= yield %>
     </main>
   </body>

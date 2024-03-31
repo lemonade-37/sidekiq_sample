@@ -1,0 +1,15 @@
+<div class="flex justify-center">
+  <h1 class="text-2xl font-bold">入力したメールアドレスに10分後にメール送信</h1>
+</div>
+<div class="flex justify-center mt-20">
+  <%= form_with url: static_pages_path, local: true, method: :post do |form| %>
+  <div class="mb-4">
+    <%= form.label :email, "メールアドレス" %>
+    <%= form.email_field :email, class: "input input-bordered border border-black w-full" %>
+  </div>
+
+  <div class="flex justify-center">
+    <%= form.submit "送信する", class: "btn btn-outline" %>
+  </div>
+<% end %>
+</div>
