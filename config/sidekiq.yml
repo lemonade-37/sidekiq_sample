@@ -1,3 +1,9 @@
 :concurrency: 3
 :queues:
   - default
+:scheduler:
+  :schedule:
+    send_email_job:
+      cron: "0 12 1 * *"
+      class: SendEmailJob
+      queue: default
